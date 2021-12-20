@@ -40,14 +40,14 @@ def is_bitlink(url, headers):
 
 
 def main():
+    load_dotenv()
+    
     shorten_url = 'https://api-ssl.bitly.com/v4/bitlinks'
     bitly_token = os.getenv('BITLY_TOKEN')
     input_link = create_parser().parse_args().url
     headers = {
         'Authorization': f'Bearer {bitly_token}'
     }
-    
-    load_dotenv()
 
     try:
         if is_bitlink(input_link, headers):
