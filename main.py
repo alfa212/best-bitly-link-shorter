@@ -43,7 +43,6 @@ def is_bitlink(url, headers):
 def main():
     shorten_url = 'https://api-ssl.bitly.com/v4/bitlinks'
     bitly_token = os.getenv('BITLY_TOKEN')
-    # input_link = input('Введите ссылку:')
     input_link = createParser().parse_args().url
     headers = {
         'Authorization': f'Bearer {bitly_token}'
