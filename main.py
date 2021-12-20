@@ -4,7 +4,6 @@ import argparse
 import requests
 from urllib.parse import urlparse
 from dotenv import load_dotenv
-load_dotenv()
 
 
 def createParser():
@@ -47,6 +46,8 @@ def main():
     headers = {
         'Authorization': f'Bearer {bitly_token}'
     }
+    
+    load_dotenv()
 
     try:
         if is_bitlink(input_link, headers):
