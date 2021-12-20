@@ -6,7 +6,7 @@ from urllib.parse import urlparse
 from dotenv import load_dotenv
 
 
-def createParser():
+def create_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument('url')
 
@@ -42,7 +42,7 @@ def is_bitlink(url, headers):
 def main():
     shorten_url = 'https://api-ssl.bitly.com/v4/bitlinks'
     bitly_token = os.getenv('BITLY_TOKEN')
-    input_link = createParser().parse_args().url
+    input_link = create_parser().parse_args().url
     headers = {
         'Authorization': f'Bearer {bitly_token}'
     }
