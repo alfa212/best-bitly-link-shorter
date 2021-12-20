@@ -16,6 +16,28 @@ Then use `pip` (or `pip3`, if there is a conflict with Python2) to install depen
 pip install -r requirements.txt
 ```
 
+### Usage
+
+#### Link shortening
+
+```
+main.py https://your_link.ru
+```
+##### Example
+```
+main.py https://yandex.ru
+```
+
+#### Bitly-link statistics
+
+```
+main.py https://your_bit_link.ru
+```
+##### Example
+```
+main.py https://bit.ly/3FbWwmi
+```
+
 ### Project Goals
 
 The code is written just for fun.
